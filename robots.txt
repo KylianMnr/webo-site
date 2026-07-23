@@ -1,3 +1,14 @@
-User-agent: *
-Allow: /
-Sitemap: https://webo-smart.fr/sitemap.xml
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>La conformité EAA | WEBO</title>
+<link rel="canonical" href="https://webo-smart.fr/conformite/">
+<meta http-equiv="refresh" content="0; url=/conformite/">
+<meta name="robots" content="noindex,follow">
+<script>window.location.replace("/conformite/");</script>
+</head>
+<body>
+<p>Cette page a été déplacée. <a href="/conformite/">Continuer vers La conformité EAA</a>.</p>
+</body>
+</html>

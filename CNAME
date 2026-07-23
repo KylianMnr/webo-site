@@ -1,1 +1,149 @@
-webo-smart.fr
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Mentions légales | WEBO</title>
+<meta name="description" content="Mentions légales du site webo-smart.fr — éditeur Webo Smart SASU, RCS Versailles 107 778 839, hébergeur, propriété intellectuelle, données personnelles et cookies.">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://webo-smart.fr/mentions-legales/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+<nav>
+  <div class="nav-in">
+    <a href="/" class="logo">Webo <span>EAA Compliance</span></a>
+    <div class="nav-links">
+      <a href="/">Accueil</a>
+      <a href="/conformite/">La conformité EAA</a>
+      <a href="/services/">Services &amp; tarifs</a>
+      <a href="/apropos/">À propos</a>
+      <a href="/contact/" class="nav-cta">Prendre rendez-vous</a>
+    </div>
+    <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+  </div>
+</nav>
+
+<main id="main-content">
+
+<section class="page-hero">
+  <div class="wrap">
+    <div class="eyebrow">Informations légales · Article 6-III de la LCEN</div>
+    <h1>Mentions légales</h1>
+    <p>Les informations que la loi impose de publier sur ce site — et que nous vérifions systématiquement chez nos clients.</p>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="prose reveal">
+
+      <h2>Éditeur du site</h2>
+      <p>Le site <strong>webo-smart.fr</strong> est édité par :</p>
+      <ul>
+        <li><strong>Dénomination sociale :</strong> Webo Smart</li>
+        <li><strong>Forme juridique :</strong> Société par actions simplifiée à associé unique (SASU)</li>
+        <li><strong>Capital social :</strong> 10 euros</li>
+        <li><strong>Siège social :</strong> 3 Allée Charles Baudelaire, 78510 Triel-sur-Seine, France</li>
+        <li><strong>Immatriculation :</strong> RCS Versailles 107 778 839</li>
+        <li><strong>Numéro SIREN :</strong> 107 778 839</li>
+        <li><strong>Identifiant européen (EUID) :</strong> FR7803.107778839</li>
+        <li><strong>Adresse électronique :</strong> <a href="mailto:contact@webo-smart.fr">contact@webo-smart.fr</a></li>
+      </ul>
+
+      <h2>Direction de la publication</h2>
+      <p>Le directeur de la publication est <strong>Kylian Meunier</strong>, en sa qualité de président de la société Webo Smart.</p>
+
+      <h2>Hébergement</h2>
+      <p>Le site est hébergé par :</p>
+      <ul>
+        <li><strong>GitHub, Inc.</strong></li>
+        <li>88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis</li>
+        <li><a href="https://github.com" target="_blank" rel="noopener">github.com</a></li>
+      </ul>
+
+      <h2>Propriété intellectuelle</h2>
+      <p>L'ensemble des éléments composant ce site — textes, méthodologies, grilles d'audit, illustrations, logotype, charte graphique et code source — est protégé par le droit de la propriété intellectuelle et demeure la propriété exclusive de Webo Smart, sauf mention contraire.</p>
+      <p>Toute reproduction, représentation, adaptation ou exploitation, totale ou partielle, par quelque procédé que ce soit, sans autorisation écrite préalable, est interdite et constitue une contrefaçon au sens des articles L.335-2 et suivants du Code de la propriété intellectuelle.</p>
+      <p>Les référentiels cités sur ce site — RGAA, WCAG, norme EN 301 549 — demeurent la propriété de leurs éditeurs respectifs et sont mentionnés à titre de référence normative.</p>
+
+      <h2>Données personnelles</h2>
+      <p>Les données collectées via le formulaire de contact et l'outil de diagnostic sont traitées par Webo Smart, responsable de traitement, aux seules fins de répondre aux demandes reçues et d'assurer le suivi de la relation commerciale.</p>
+      <ul>
+        <li><strong>Base légale :</strong> intérêt légitime et mesures précontractuelles prises à la demande de la personne concernée (article 6.1.b et 6.1.f du RGPD).</li>
+        <li><strong>Destinataires :</strong> Webo Smart exclusivement. Aucune donnée n'est cédée, louée ou revendue à des tiers.</li>
+        <li><strong>Durée de conservation :</strong> trois ans à compter du dernier contact, sauf obligation légale de conservation plus longue.</li>
+      </ul>
+      <p>Conformément au Règlement (UE) 2016/679 et à la loi n° 78-17 du 6 janvier 1978 modifiée, vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation, d'opposition et de portabilité de vos données. Vous pouvez exercer ces droits en écrivant à <a href="mailto:contact@webo-smart.fr">contact@webo-smart.fr</a>.</p>
+      <p>Vous avez également le droit d'introduire une réclamation auprès de la Commission nationale de l'informatique et des libertés (CNIL), 3 place de Fontenoy, TSA 80715, 75334 Paris CEDEX 07 — <a href="https://www.cnil.fr" target="_blank" rel="noopener">cnil.fr</a>.</p>
+
+      <h2>Cookies et mesure d'audience</h2>
+      <p>Ce site n'utilise ni cookie publicitaire, ni traceur tiers à des fins de profilage. Seuls des cookies strictement nécessaires au fonctionnement du site peuvent être déposés ; conformément à l'article 82 de la loi Informatique et Libertés, ceux-ci sont dispensés de consentement préalable.</p>
+
+      <h2>Diagnostic d'accessibilité en ligne</h2>
+      <p>L'outil de diagnostic proposé sur ce site fournit une évaluation <strong>automatisée et indicative</strong>. Les tests automatiques ne détectent qu'une part des non-conformités : ils ne remplacent pas un audit complet portant sur les 106 critères du RGAA 4.1.2, dont une partie ne peut être vérifiée que manuellement. Les résultats affichés ne constituent ni un audit de conformité, ni une garantie de conformité juridique.</p>
+
+      <h2>Limitation de responsabilité</h2>
+      <p>Les informations réglementaires publiées sur ce site le sont à titre d'information générale et sont tenues à jour avec le plus grand soin. Elles ne constituent pas un conseil juridique. Pour l'analyse d'une situation particulière, il convient de se rapprocher d'un professionnel du droit.</p>
+
+      <h2>Accessibilité</h2>
+      <p>Webo Smart applique à son propre site les exigences qu'elle accompagne chez ses clients. L'état de conformité du site, les résultats des tests et les voies de recours sont détaillés dans notre <a href="/accessibilite/">déclaration d'accessibilité</a>.</p>
+
+      <h2>Droit applicable</h2>
+      <p>Les présentes mentions légales sont régies par le droit français. En cas de litige, et à défaut de résolution amiable, les tribunaux français seront seuls compétents.</p>
+
+      <p><em>Dernière mise à jour : 22 juillet 2026.</em></p>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="/" class="logo">Webo <span>EAA Compliance</span></a>
+        <p>Cabinet spécialisé dans la mise en conformité à l'European Accessibility Act. Nous rendons vos services numériques accessibles à tous — et conformes à la loi.</p>
+      </div>
+      <div class="foot-col">
+        <h3>Navigation</h3>
+        <a href="/">Accueil</a>
+        <a href="/conformite/">La conformité EAA</a>
+        <a href="/services/">Services &amp; tarifs</a>
+        <a href="/apropos/">À propos</a>
+      </div>
+      <div class="foot-col">
+        <h3>Ressources</h3>
+        <a href="/conformite/">Comprendre l'EAA</a>
+        <a href="/conformite/#sanctions">Sanctions &amp; contrôles</a>
+        <a href="/services/">Nos formules</a>
+        <a href="/contact/">Prendre rendez-vous</a>
+      </div>
+      <div class="foot-col">
+        <h3>Contact</h3>
+        <a href="mailto:contact@webo-smart.fr">contact@webo-smart.fr</a>
+        <a href="/contact/">Formulaire de contact</a>
+        <a href="/apropos/">Kylian Meunier · Fondateur</a>
+        <a href="/accessibilite/">Déclaration d'accessibilité</a>
+        <a href="/mentions-legales/">Mentions légales</a>
+      </div>
+    </div>
+    <div class="foot-bot">
+      <span>© <span id="year">2026</span> WEBO — Tous droits réservés. Webo Smart, SASU au capital de 10 € · RCS Versailles 107 778 839.</span>
+      <span>Île-de-France · France</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -18,8 +18,10 @@
     entries.forEach(function(e){
       if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
     });
-  }, { threshold: .12 });
+  }, { threshold: 0, rootMargin: '0px 0px -8% 0px' });
   document.querySelectorAll('.reveal').forEach(function(el){ io.observe(el); });
+  window.addEventListener('load',function(){setTimeout(function(){document.querySelectorAll('.reveal').forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight*1.2)el.classList.add('in')})},400)});
+  window.addEventListener('scroll',function(){document.querySelectorAll('.reveal:not(.in)').forEach(function(el){var r=el.getBoundingClientRect();if(r.top<window.innerHeight*0.95&&r.bottom>0)el.classList.add('in')})},{passive:true});
 
   // Compteur de risque
   var amt = document.getElementById('riskAmount');

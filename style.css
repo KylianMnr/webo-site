@@ -1,4 +1,4 @@
-/* ═══════════════════════════════════════════════════════════
+/* ════════════════════════════════════════════════════════════
    WEBO — Site vitrine · Charte crème / encre / or
    Fraunces (display) · Instrument Sans (body) · JetBrains Mono (data)
    ═══════════════════════════════════════════════════════════ */
@@ -140,7 +140,7 @@ section{padding:100px 0}
 .step p{font-size:14px;color:var(--ink2);line-height:1.55}
 
 /* ── Pricing ── */
-.price-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;align-items:stretch}
+.price-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;align-items:stretch}
 .price{background:var(--cream2);border:1px solid var(--line);border-radius:20px;padding:34px 30px;display:flex;flex-direction:column;transition:all .3s}
 .price:hover{box-shadow:var(--sh-md);transform:translateY(-3px)}
 .price.feat{background:var(--ink);color:var(--cream);border-color:var(--ink);position:relative}

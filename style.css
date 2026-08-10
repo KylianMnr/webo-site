@@ -327,3 +327,59 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
 .form-feedback.ok{background:rgba(76,175,125,.1);border:1px solid rgba(76,175,125,.35);color:#2E7D5B}
 .form-feedback.err{background:rgba(231,76,76,.08);border:1px solid rgba(231,76,76,.3);color:#B33A3A}
 .form-feedback a{color:inherit;font-weight:600;text-decoration:underline}
+/* ═══════════════════════════════════════════════════════════════
+   FLUID INTERFACES — touche Apple (Designing Fluid Interfaces)
+   Ajouté en fin de feuille. Rien n'est remplacé.
+   Sobre : c'est une vitrine d'accessibilite, le mouvement reste
+   discret et se coupe entierement si prefers-reduced-motion.
+   Ce qui manquait au site :
+   1. RESPONSE  — feedback au clic (:active), absent jusqu'ici
+   2. SPRINGS   — les transitions "plates" deviennent ressort
+   ═══════════════════════════════════════════════════════════════ */
+
+:root{
+  --spring:cubic-bezier(.22,1,.36,1);
+  --spring-snap:cubic-bezier(.16,1.08,.38,1);
+  --press:120ms;
+}
+
+/* ── 1. RESPONSE : le clic s'enfonce (n'existait pas) ──
+   Feedback des l'appui, pas au relachement. Sensation physique. */
+.btn:active,.btn-primary:active,.btn-gold:active,.btn-ghost:active,
+.nav-cta:active,.scan-btn:active,.scan-cta:active{
+  transform:scale(.95)!important;
+  transition-duration:var(--press)!important;
+  transition-timing-function:var(--spring-snap)!important;
+}
+.card:active,.risk-card:active,.price:active{
+  transform:scale(.985)!important;
+  transition-duration:var(--press)!important;
+}
+.burger:active{transform:scale(.9)!important;transition-duration:var(--press)!important}
+
+/* ── 2. SPRINGS : les hover existants se posent au lieu de glisser ──
+   On garde les memes deplacements, on change juste la courbe. */
+.btn,.btn-primary,.btn-gold,.btn-ghost,.nav-cta,.card,.price,.scan-btn{
+  transition-timing-function:var(--spring)!important;
+}
+
+/* Hover un cran plus present (le site en avait deja un bon, on l'affine) */
+.card:hover{transform:translateY(-6px)!important}
+.price:hover{transform:translateY(-5px) scale(1.008)!important}
+.btn-primary:hover,.btn-gold:hover{transform:translateY(-3px)!important}
+
+/* ── 3. TYPO : chiffres alignes sur les montants (risques, prix) ──
+   Les euros ne "dansent" plus quand ils changent. */
+.risk-amount,.price-amt,.scan-exposure-amount,.scan-score,.scan-meta-val{
+  font-variant-numeric:tabular-nums;
+}
+
+/* ── 4. RESPECT DU MOUVEMENT REDUIT (le site en a deja un, on complete) ──
+   Vitrine d'accessibilite : tout feedback moteur se coupe ici. */
+@media(prefers-reduced-motion:reduce){
+  .btn:active,.btn-primary:active,.btn-gold:active,.btn-ghost:active,
+  .nav-cta:active,.scan-btn:active,.scan-cta:active,
+  .card:active,.risk-card:active,.price:active,.burger:active{
+    transform:none!important;
+  }
+}

@@ -114,6 +114,7 @@ section{padding:100px 0}
 
 /* ── Cards ── */
 .cards{display:grid;gap:22px}
+.cards-2{grid-template-columns:repeat(2,1fr)}
 .cards-3{grid-template-columns:repeat(3,1fr)}
 .cards-4{grid-template-columns:repeat(4,1fr)}
 .card{background:var(--cream2);border:1px solid var(--line);border-radius:var(--radius);padding:30px 26px;transition:all .3s;box-shadow:var(--sh-sm)}
@@ -209,14 +210,14 @@ footer{background:var(--ink);color:var(--cream);padding:64px 0 32px}
 /* ── Responsive ── */
 @media(max-width:940px){
   .hero-grid{grid-template-columns:1fr;gap:44px}
-  .cards-3,.cards-4,.stat-grid,.steps,.price-grid,.foot-grid,.contact-grid{grid-template-columns:1fr 1fr}
+  .cards-2,.cards-3,.cards-4,.stat-grid,.steps,.price-grid,.foot-grid,.contact-grid{grid-template-columns:1fr 1fr}
   .nav-links{display:none}
   .burger{display:block}
   .nav-links.open{display:flex;position:absolute;top:70px;left:0;right:0;flex-direction:column;background:var(--cream2);padding:20px 28px;gap:18px;border-bottom:1px solid var(--line);box-shadow:var(--sh-md)}
 }
 @media(max-width:600px){
   section{padding:64px 0}
-  .cards-3,.cards-4,.stat-grid,.steps,.price-grid,.foot-grid,.contact-grid{grid-template-columns:1fr}
+  .cards-2,.cards-3,.cards-4,.stat-grid,.steps,.price-grid,.foot-grid,.contact-grid{grid-template-columns:1fr}
   .cta-band{padding:44px 26px}
   .wrap{padding:0 20px}
 }
@@ -335,7 +336,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,
    Ce qui manquait au site :
    1. RESPONSE  — feedback au clic (:active), absent jusqu'ici
    2. SPRINGS   — les transitions "plates" deviennent ressort
-   ═══════════════════════════════════════════════════════════════ */
+   ══════════════════════════════════════════════════════════════*/
 
 :root{
   --spring:cubic-bezier(.22,1,.36,1);

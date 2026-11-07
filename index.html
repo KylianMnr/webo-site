@@ -1,98 +1,34 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Appli Stream | Vos clips de live, publiés partout</title>
-<meta name="description" content="Appli Stream transforme les clips de vos lives en vidéos verticales et les publie sur TikTok, Instagram et YouTube Shorts après votre validation.">
-<style>
-:root{--bg:#0d0a1a;--card:#16122b;--line:#2b2450;--txt:#eeeaff;--mut:#a39bc8;--p:#a855f7;--p2:#7c3aed}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}
-a{color:var(--p)}
-nav{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;justify-content:space-between;padding:14px 22px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:5}
-nav b{font-size:18px}nav b span{color:var(--p)}
-nav div a{margin-left:16px;text-decoration:none;color:var(--mut);font-size:15px}
-nav div a:hover,nav div a.on{color:var(--txt)}
-main{max-width:920px;margin:0 auto;padding:30px 22px 60px}
-.view{display:none}.view.on{display:block}
-h1{font-size:clamp(28px,5vw,44px);line-height:1.15;margin:.2em 0 .4em}
-h2{margin:1.6em 0 .4em;font-size:22px}h3{margin:1.2em 0 .3em;font-size:17px;color:var(--p)}
-p,li{color:#d9d4f2}
-.lead{font-size:19px;color:var(--mut);max-width:680px}
-.btn{display:inline-block;background:var(--p2);color:#fff;text-decoration:none;padding:11px 20px;border-radius:10px;margin:8px 10px 8px 0}
-.btn.alt{background:transparent;border:1px solid var(--line)}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin:20px 0}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
-.card h3{margin-top:0}
-.steps{counter-reset:s;list-style:none;padding:0}
-.steps li{counter-increment:s;padding:12px 14px 12px 52px;position:relative;background:var(--card);border:1px solid var(--line);border-radius:12px;margin:10px 0}
-.steps li:before{content:counter(s);position:absolute;left:14px;top:10px;width:26px;height:26px;border-radius:50%;background:var(--p2);text-align:center;line-height:26px;font-weight:700}
-table{border-collapse:collapse;width:100%;margin:14px 0}th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;font-size:15px;vertical-align:top}th{background:var(--card)}
-footer{border-top:1px solid var(--line);padding:20px 22px;color:var(--mut);font-size:14px;text-align:center}
-footer a{color:var(--mut);margin:0 8px}
-.maj{color:var(--mut);font-size:14px}
-</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WEBO Smart | Vos clips de live, publiés partout</title>
+<meta name="description" content="WEBO Smart prépare vos clips de live en vidéos verticales et les publie sur TikTok, Instagram Reels et YouTube Shorts, après votre validation.">
+<link rel="canonical" href="https://webo-smart.fr/">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+<style>.nav-links.open{display:flex;flex-direction:column;align-items:flex-start;position:absolute;top:100%;left:0;right:0;background:var(--cream);padding:18px 24px;gap:16px;border-bottom:1px solid var(--line)}.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px}</style>
 </head>
 <body>
-<nav>
-  <b>Appli <span>Stream</span></b>
-  <div><a href="#accueil" data-v="accueil">Accueil</a><a href="#fonctionnement" data-v="fonctionnement">Fonctionnement</a><a href="#contact" data-v="contact">Contact</a></div>
-</nav>
+<nav class="nav"><div class="nav-in"><a href="#accueil" class="logo">Webo <span>Smart</span></a><div class="nav-links"><a href="#accueil" data-v="accueil" class="active">Accueil</a><a href="#fonctionnement" data-v="fonctionnement">Fonctionnement</a><a href="#confidentialite" data-v="confidentialite">Confidentialité</a><a href="#contact" data-v="contact" class="nav-cta">Demander un accès</a></div><button class="burger" aria-label="Menu"><i class="fa-solid fa-bars"></i></button></div></nav>
 <main>
-
-<section class="view" id="v-accueil">
-  <h1>Vos clips de live, publiés partout, sans perdre le contrôle.</h1>
-  <p class="lead">Vous clippez pendant votre live. Appli Stream met le clip en vertical, applique vos réglages, vous demande votre accord, puis le publie sur TikTok, Instagram et YouTube Shorts.</p>
-  <a class="btn" href="#contact">Demander un accès</a><a class="btn alt" href="#fonctionnement">Voir le fonctionnement</a>
-  <div class="grid">
-    <div class="card"><h3>Vous gardez la main</h3><p>Rien n'est publié sans votre validation, clip par clip.</p></div>
-    <div class="card"><h3>Tout se règle</h3><p>Son d'introduction, texte sur la vidéo, titres et légendes (ou aucun), hashtags, musique, plateformes, horaires.</p></div>
-    <div class="card"><h3>Un seul tableau de bord</h3><p>Clips, planning des lives, publications et statistiques par plateforme, au même endroit.</p></div>
-  </div>
-  <p class="maj">Appli Stream est un service édité par WEBO Smart SAS. Il n'est affilié ni à TikTok, ni à Google ou YouTube, ni à Meta ou Instagram, ni à Twitch.</p>
-</section>
-
-<section class="view" id="v-fonctionnement">
-  <h1>Comment ça marche</h1>
-  <ol class="steps">
-    <li><b>Vous connectez vos comptes.</b> Vous autorisez Appli Stream à publier sur vos comptes TikTok, YouTube et Instagram via leur connexion officielle. Vous pouvez retirer cet accès à tout moment.</li>
-    <li><b>Vous déposez vos clips.</b> Vous importez les clips que vous avez vous-même enregistrés pendant vos lives.</li>
-    <li><b>L'appli prépare la vidéo.</b> Passage en format vertical et application de vos réglages : son d'introduction, texte, hashtags.</li>
-    <li><b>Vous validez.</b> Vous voyez la vidéo prête et vous acceptez ou refusez. Aucune publication automatique sans votre accord.</li>
-    <li><b>L'appli publie.</b> La vidéo part sur les plateformes que vous avez choisies, à l'heure que vous avez choisie.</li>
-    <li><b>Vous suivez les résultats.</b> Un résumé des vues, abonnés et commentaires par plateforme.</li>
-  </ol>
-  <h2>Ce que l'appli ne fait pas</h2>
-  <ul>
-    <li>Elle ne publie jamais sans votre validation.</li>
-    <li>Elle ne choisit pas vos moments forts à votre place.</li>
-    <li>Elle ne revend aucune de vos données.</li>
-    <li>Elle n'ajoute aucun filigrane publicitaire sur vos vidéos.</li>
-  </ul>
-  <h2>Permissions demandées</h2>
-  <table>
-    <tr><th>Plateforme</th><th>Pourquoi</th></tr>
-    <tr><td>TikTok</td><td>Publier la vidéo que vous avez validée sur votre compte.</td></tr>
-    <tr><td>YouTube</td><td>Mettre en ligne la vidéo validée en Short, et lire les statistiques de votre chaîne.</td></tr>
-    <tr><td>Instagram</td><td>Publier le Reel validé sur votre compte professionnel, et lire ses statistiques.</td></tr>
-  </table>
-</section>
-
-<section class="view" id="v-contact">
-  <h1>Contact et accès</h1>
-  <p class="lead">Appli Stream est en phase de test. Écrivez-nous pour demander un accès ou poser une question.</p>
-  <div class="card"><p><b>Par e-mail :</b> <a href="mailto:kmeunier@webo-smart.fr">kmeunier@webo-smart.fr</a><br>
-  <b>Éditeur :</b> WEBO Smart SAS, Triel-sur-Seine (78510), France</p></div>
-  <p>Pour exercer vos droits sur vos données ou supprimer votre compte, écrivez à la même adresse. Nous répondons sous 30 jours maximum.</p>
-</section>
-
-<section class="view" id="v-cgu">
+<section class="hero view on" id="v-accueil" style="display:block"><div class="wrap hero-grid"><div><div class="eyebrow">Pour les petits streamers gaming</div><h1>Vos meilleurs moments de live, publiés partout, <em>sans perdre le contrôle</em>.</h1><p class="hero-lede">Vous clippez pendant votre live. WEBO Smart met le clip en format vertical, applique vos réglages, vous demande votre accord, puis le publie sur TikTok, Instagram Reels et YouTube Shorts. Vous suivez ensuite les résultats chaque jour, plateforme par plateforme.</p><div class="hero-cta"><a href="#contact" class="btn btn-primary"><i class="fa-solid fa-envelope"></i> Demander un accès</a><a href="#fonctionnement" class="btn btn-ghost">Voir le fonctionnement</a></div></div><div class="risk-card reveal in"><div class="risk-label">Un clip, trois plateformes</div><div class="risk-amount">1 clip</div><div class="risk-sub">devient une vidéo verticale publiée sur TikTok, Instagram Reels et YouTube Shorts, uniquement après votre validation</div><div class="risk-rows"><div class="risk-row"><span>Import de vos clips</span><b>Vous</b></div><div class="risk-row"><span>Montage vertical et réglages</span><b>Auto</b></div><div class="risk-row"><span>Validation avant publication</span><b>Vous</b></div><div class="risk-row"><span>Publication à l'heure choisie</span><b>Auto</b></div><div class="risk-row" style="border-top:1px solid rgba(197,160,89,.28);margin-top:6px;padding-top:10px"><span><strong>Statistiques quotidiennes</strong></span><b style="color:var(--gold)">Par plateforme</b></div></div></div></div>
+<div class="sec"><div class="wrap"><div class="sec-head reveal in"><div class="eyebrow">Ce que vous obtenez</div><h2>Un outil simple, pensé pour ceux qui streament seuls.</h2><p>Pas de studio de montage à apprendre, pas de publication sauvage. Vous restez décideur de chaque vidéo.</p></div><div class="cards cards-3"><div class="card reveal in"><div class="card-ico"><i class="fa-solid fa-hand"></i></div><h3>Vous gardez la main</h3><p>Rien n'est publié sans votre validation, clip par clip. Vous pouvez refuser, corriger ou reprogrammer.</p></div><div class="card reveal in"><div class="card-ico"><i class="fa-solid fa-sliders"></i></div><h3>Tout se règle</h3><p>Son d'introduction, texte à l'écran, titres et légendes (ou aucun), hashtags, musique, plateformes et horaires : chacun configure son propre style.</p></div><div class="card reveal in"><div class="card-ico"><i class="fa-solid fa-chart-line"></i></div><h3>Un seul tableau de bord</h3><p>Clips, planning, publications et statistiques par plateforme, au même endroit.</p></div></div></div></div>
+<div class="band"><div class="wrap"><div class="sec-head reveal in"><div class="eyebrow">Pourquoi maintenant</div><h2>La petite chaîne est la grande oubliée.</h2></div><div class="stat-grid"><div class="stat reveal in"><b>3</b><span>plateformes alimentées depuis un seul clip</span></div><div class="stat reveal in"><b>0</b><span>publication sans votre accord</span></div><div class="stat reveal in"><b>~95 %</b><span>des streamers Twitch restent sous 5 spectateurs en moyenne (estimations publiques du marché)</span></div></div></div></div>
+<div class="sec"><div class="wrap"><div class="sec-head reveal in"><div class="eyebrow">En quatre étapes</div><h2>De votre live à vos réseaux.</h2></div><div class="steps"><div class="step reveal in"><div class="step-bar"><i></i></div><h3>Connexion</h3><p>Vous autorisez WEBO Smart sur vos comptes via la connexion officielle de chaque plateforme.</p></div><div class="step reveal in"><div class="step-bar"><i></i></div><h3>Import</h3><p>Vous déposez les clips que vous avez vous-même enregistrés.</p></div><div class="step reveal in"><div class="step-bar"><i></i></div><h3>Validation</h3><p>Vous voyez la vidéo prête avec vos réglages et vous acceptez ou refusez.</p></div><div class="step reveal in"><div class="step-bar"><i></i></div><h3>Publication</h3><p>La vidéo part à l'heure choisie, puis vous suivez les résultats.</p></div></div></div></div>
+<div class="sec"><div class="wrap"><div class="cta-band reveal in"><h2>Accès anticipé pour les premiers streamers.</h2><p>WEBO Smart est en préparation. Écrivez-nous pour être prévenu de l'ouverture et donner votre avis sur ce dont vous avez besoin.</p><a href="#contact" class="btn btn-gold"><i class="fa-solid fa-paper-plane"></i> Nous contacter</a></div></div></div></section>
+<section class="sec view" id="v-fonctionnement"><div class="wrap"><div class="sec-head"><div class="eyebrow">Fonctionnement</div><h2>Comment ça marche.</h2><p>Six étapes, avec votre accord à chaque moment important.</p></div><div class="steps"><div class="step"><div class="step-bar"><i></i></div><h3>1. Vous connectez vos comptes</h3><p>Vous autorisez WEBO Smart à publier sur TikTok, YouTube et Instagram via leur connexion officielle. Vous retirez cet accès quand vous voulez.</p></div><div class="step"><div class="step-bar"><i></i></div><h3>2. Vous déposez vos clips</h3><p>Vous importez les clips que vous avez vous-même enregistrés pendant vos lives.</p></div><div class="step"><div class="step-bar"><i></i></div><h3>3. La vidéo est préparée</h3><p>Passage en format vertical et application de vos réglages : son d'introduction, texte, hashtags, musique.</p></div><div class="step"><div class="step-bar"><i></i></div><h3>4. Vous validez</h3><p>Vous acceptez ou refusez la vidéo prête. Aucune publication automatique sans votre accord.</p></div><div class="step"><div class="step-bar"><i></i></div><h3>5. Elle est publiée</h3><p>La vidéo part sur les plateformes choisies, à l'heure choisie.</p></div><div class="step"><div class="step-bar"><i></i></div><h3>6. Vous suivez les résultats</h3><p>Un résumé quotidien des vues, abonnés et commentaires par plateforme.</p></div></div><div class="prose" style="margin-top:36px"><h2>Ce que WEBO Smart ne fait pas</h2><ul><li>Il ne publie rien sans votre validation.</li><li>Il ne fournit pas de sons ni de musiques : chacun utilise les siens et reste responsable de ses droits.</li><li>Il ne traite que les clips que vous importez vous-même.</li><li>Il n'est affilié ni à TikTok, ni à Google/YouTube, ni à Meta/Instagram, ni à Twitch.</li></ul></div></div></section>
+<section class="sec view" id="v-contact"><div class="wrap prose"><div class="eyebrow">Contact</div><h1>Contact et accès</h1><p>WEBO Smart est en phase de préparation. Les accès officiels aux plateformes (TikTok, Google/YouTube, Meta/Instagram) sont en cours de demande. Écrivez-nous pour demander un accès anticipé ou poser une question.</p><div class="note"><p><b>Email :</b> <a href="mailto:kylian.andremeunier@gmail.com">kylian.andremeunier@gmail.com</a></p><p><b>Société :</b> WEBO Smart SAS, 3 Allée Charles Baudelaire, 78510 Triel-sur-Seine</p></div></div></section>
+<section class="sec view" id="v-cgu"><div class="wrap prose">
   <h1>Conditions générales d'utilisation</h1>
   <p class="maj">Dernière mise à jour : 7 novembre 2026</p>
 
   <h2>1. Éditeur et objet</h2>
-  <p>Le service Appli Stream (« le Service ») est édité par WEBO Smart SAS (« l'Éditeur »), dont les coordonnées figurent dans les <a href="#mentions">mentions légales</a>. Les présentes conditions encadrent l'utilisation du Service par toute personne qui crée un compte (« l'Utilisateur »).</p>
+  <p>Le service WEBO Smart (« le Service ») est édité par WEBO Smart SAS (« l'Éditeur »), dont les coordonnées figurent dans les <a href="#mentions">mentions légales</a>. Les présentes conditions encadrent l'utilisation du Service par toute personne qui crée un compte (« l'Utilisateur »).</p>
   <p>Le Service permet à un créateur de contenu de mettre en forme des clips de ses diffusions en direct, de les valider, puis de les publier sur ses propres comptes de réseaux sociaux (TikTok, YouTube, Instagram) et de consulter des statistiques.</p>
 
   <h2>2. Compte et accès</h2>
@@ -129,24 +65,23 @@ footer a{color:var(--mut);margin:0 8px}
 
   <h2>12. Droit applicable</h2>
   <p>Les présentes conditions sont soumises au droit français. En cas de litige, une solution amiable est recherchée avant toute action. Un consommateur peut recourir à un médiateur de la consommation dont les coordonnées figureront dans les mentions légales.</p>
-</section>
-
-<section class="view" id="v-confidentialite">
+</div></section>
+<section class="sec view" id="v-confidentialite"><div class="wrap prose">
   <h1>Politique de confidentialité</h1>
   <p class="maj">Dernière mise à jour : 7 novembre 2026</p>
 
   <h2>1. Responsable du traitement</h2>
-  <p>WEBO Smart SAS, 3 Allée Charles Baudelaire, 78510 Triel-sur-Seine, France. Contact : <a href="mailto:kmeunier@webo-smart.fr">kmeunier@webo-smart.fr</a>.</p>
+  <p>WEBO Smart SAS, 3 Allée Charles Baudelaire, 78510 Triel-sur-Seine, France. Contact : <a href="mailto:kylian.andremeunier@gmail.com">kylian.andremeunier@gmail.com</a>.</p>
 
   <h2>2. Données collectées</h2>
   <table>
-    <tr><th>Donnée</th><th>Finalité</th><th>Base légale</th></tr>
+    <tbody><tr><th>Donnée</th><th>Finalité</th><th>Base légale</th></tr>
     <tr><td>Adresse e-mail, nom d'affichage</td><td>Créer et gérer le compte, vous contacter sur le Service</td><td>Exécution du contrat</td></tr>
     <tr><td>Jetons d'accès aux plateformes (TikTok, YouTube, Instagram) et identifiant de votre compte</td><td>Publier les vidéos que vous avez validées et lire vos statistiques</td><td>Exécution du contrat</td></tr>
     <tr><td>Vidéos importées et vidéos montées</td><td>Montage, validation, publication</td><td>Exécution du contrat</td></tr>
     <tr><td>Statistiques de vos comptes (vues, abonnés, rétention, commentaires)</td><td>Afficher votre tableau de bord et votre résumé</td><td>Exécution du contrat</td></tr>
     <tr><td>Journaux techniques (date, erreurs)</td><td>Sécurité et bon fonctionnement</td><td>Intérêt légitime</td></tr>
-  </table>
+  </tbody></table>
   <p>Nous ne collectons que les données nécessaires à ces finalités. Aucun cookie publicitaire ni outil de suivi publicitaire n'est utilisé.</p>
 
   <h2>3. Utilisation des données issues des plateformes</h2>
@@ -166,7 +101,7 @@ footer a{color:var(--mut);margin:0 8px}
   <p>Les données sont accessibles à l'Éditeur et à ses prestataires techniques (hébergement, stockage, envoi d'e-mails, paiement le cas échéant), qui agissent selon nos instructions. La liste des prestataires et leur localisation est communiquée sur demande. Les données sont hébergées dans l'Union européenne dans la mesure du possible ; tout transfert hors Union européenne est encadré par des garanties appropriées (clauses contractuelles types).</p>
 
   <h2>6. Vos droits</h2>
-  <p>Vous disposez des droits d'accès, de rectification, d'effacement, de limitation, d'opposition et de portabilité. Pour les exercer, écrivez à <a href="mailto:kmeunier@webo-smart.fr">kmeunier@webo-smart.fr</a> ; nous répondons sous un mois. Vous pouvez aussi saisir la CNIL (<a href="https://www.cnil.fr">cnil.fr</a>).</p>
+  <p>Vous disposez des droits d'accès, de rectification, d'effacement, de limitation, d'opposition et de portabilité. Pour les exercer, écrivez à <a href="mailto:kylian.andremeunier@gmail.com">kylian.andremeunier@gmail.com</a> ; nous répondons sous un mois. Vous pouvez aussi saisir la CNIL (<a href="https://www.cnil.fr">cnil.fr</a>).</p>
 
   <h2>7. Retirer l'accès à vos comptes</h2>
   <ul>
@@ -185,33 +120,21 @@ footer a{color:var(--mut);margin:0 8px}
 
   <h2>10. Modifications</h2>
   <p>Cette politique peut évoluer. La date de dernière mise à jour figure en haut de la page.</p>
-</section>
-
-<section class="view" id="v-mentions">
+</div></section>
+<section class="sec view" id="v-mentions"><div class="wrap prose">
   <h1>Mentions légales</h1>
   <div class="card">
     <p><b>Éditeur :</b> WEBO Smart, société par actions simplifiée à associé unique (SAS), capital de 10 €<br>
     <b>Siège :</b> 3 Allée Charles Baudelaire, 78510 Triel-sur-Seine, France<br>
     <b>SIREN / RCS :</b> 107 778 839 R.C.S. Versailles<br>
     <b>Président et directeur de la publication :</b> Kylian Meunier<br>
-    <b>Contact :</b> <a href="mailto:kmeunier@webo-smart.fr">kmeunier@webo-smart.fr</a><br>
+    <b>Contact :</b> <a href="mailto:kylian.andremeunier@gmail.com">kylian.andremeunier@gmail.com</a><br>
     <b>Hébergeur du site :</b> GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis<br>
     <b>Médiateur de la consommation :</b> sera désigné avant l'ouverture des abonnements payants</p>
   </div>
-</section>
-
+</div></section>
 </main>
-<footer>
-  <a href="#cgu">CGU</a><a href="#confidentialite">Confidentialité</a><a href="#mentions">Mentions légales</a><a href="#contact">Contact</a>
-  <div style="margin-top:8px">© 2026 WEBO Smart SAS. Appli Stream n'est affilié ni à TikTok, ni à Google/YouTube, ni à Meta/Instagram.</div>
-</footer>
-<script>
-const views=['accueil','fonctionnement','contact','cgu','confidentialite','mentions'];
-function show(){let h=(location.hash||'#accueil').slice(1);if(!views.includes(h))h='accueil';
-  views.forEach(v=>document.getElementById('v-'+v).classList.toggle('on',v===h));
-  document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.dataset.v===h));
-  window.scrollTo(0,0)}
-addEventListener('hashchange',show);show();
-</script>
+<footer><div class="wrap"><div class="foot-grid"><div class="foot-brand"><a href="#accueil" class="logo">Webo <span>Smart</span></a><p>Publication de clips de live pour les petits streamers gaming. WEBO Smart n'est affilié ni à TikTok, ni à Google/YouTube, ni à Meta/Instagram, ni à Twitch.</p></div><div class="foot-col"><h3 class="foot-h">Navigation</h3><a href="#accueil">Accueil</a><a href="#fonctionnement">Fonctionnement</a><a href="#contact">Contact</a></div><div class="foot-col"><h3 class="foot-h">Légal</h3><a href="#cgu">CGU</a><a href="#confidentialite">Confidentialité</a><a href="#mentions">Mentions légales</a></div><div class="foot-col"><h3 class="foot-h">Contact</h3><a href="mailto:kylian.andremeunier@gmail.com">kylian.andremeunier@gmail.com</a></div></div><div class="foot-bot"><span>© 2026 WEBO Smart, SAS au capital de 10 € · RCS Versailles 107 778 839.</span><span>Triel-sur-Seine · France</span></div></div></footer>
+<script>(function(){var views=['accueil','fonctionnement','contact','cgu','confidentialite','mentions'];function show(){var h=(location.hash||'#accueil').slice(1);if(views.indexOf(h)<0)h='accueil';views.forEach(function(v){var e=document.getElementById('v-'+v);if(e){e.style.display=v===h?'block':'none';}});document.querySelectorAll('.nav-links a').forEach(function(a){a.classList.toggle('active',a.getAttribute('data-v')===h)});document.querySelector('.nav-links').classList.remove('open');window.scrollTo(0,0);}window.addEventListener('hashchange',show);show();var b=document.querySelector('.burger');b.addEventListener('click',function(){document.querySelector('.nav-links').classList.toggle('open')});})();</script>
 </body>
 </html>

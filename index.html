@@ -1,313 +1,217 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Mise en conformité accessibilité (RGAA / EAA) de votre site | WEBO Smart</title>
-<meta name="description" content="Webo Smart accompagne les PME et e-commerçants dans leur mise en conformité à l'European Accessibility Act (EAA) : audit RGAA, remédiation, déclaration d'accessibilité. Évitez jusqu'à 50 000 € d'amende par service.">
-<meta name="keywords" content="EAA, European Accessibility Act, accessibilité numérique, RGAA, conformité, audit accessibilité, WCAG, mise en conformité, PME, e-commerce">
-<meta property="og:title" content="WEBO — Mise en conformité EAA">
-<meta property="og:description" content="Audit, remédiation et déclaration d'accessibilité pour rendre votre site conforme à l'European Accessibility Act.">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="fr_FR">
-<link rel="canonical" href="https://webo-smart.fr/">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"ProfessionalService","name":"Webo Smart","description":"Cabinet d'accessibilité numérique : mise en conformité RGAA et European Accessibility Act (EAA), audit, remédiation et déclaration d'accessibilité pour PME et e-commerçants.","areaServed":{"@type":"Country","name":"France"},"serviceType":"Accessibilité numérique / Conformité RGAA / Conformité EAA","founder":{"@type":"Person","name":"Kylian Meunier"},"address":{"@type":"PostalAddress","addressLocality":"Triel-sur-Seine","postalCode":"78510","addressCountry":"FR"},"email":"contact@webo-smart.fr","url":"https://webo-smart.fr/"}
-</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,600&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-<link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Appli Stream | Vos clips de live, publiés partout</title>
+<meta name="description" content="Appli Stream transforme les clips de vos lives en vidéos verticales et les publie sur TikTok, Instagram et YouTube Shorts après votre validation.">
+<style>
+:root{--bg:#0d0a1a;--card:#16122b;--line:#2b2450;--txt:#eeeaff;--mut:#a39bc8;--p:#a855f7;--p2:#7c3aed}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--txt);font:16px/1.65 system-ui,-apple-system,Segoe UI,sans-serif}
+a{color:var(--p)}
+nav{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;justify-content:space-between;padding:14px 22px;border-bottom:1px solid var(--line);position:sticky;top:0;background:var(--bg);z-index:5}
+nav b{font-size:18px}nav b span{color:var(--p)}
+nav div a{margin-left:16px;text-decoration:none;color:var(--mut);font-size:15px}
+nav div a:hover,nav div a.on{color:var(--txt)}
+main{max-width:920px;margin:0 auto;padding:30px 22px 60px}
+.view{display:none}.view.on{display:block}
+h1{font-size:clamp(28px,5vw,44px);line-height:1.15;margin:.2em 0 .4em}
+h2{margin:1.6em 0 .4em;font-size:22px}h3{margin:1.2em 0 .3em;font-size:17px;color:var(--p)}
+p,li{color:#d9d4f2}
+.lead{font-size:19px;color:var(--mut);max-width:680px}
+.btn{display:inline-block;background:var(--p2);color:#fff;text-decoration:none;padding:11px 20px;border-radius:10px;margin:8px 10px 8px 0}
+.btn.alt{background:transparent;border:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:14px;margin:20px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.card h3{margin-top:0}
+.steps{counter-reset:s;list-style:none;padding:0}
+.steps li{counter-increment:s;padding:12px 14px 12px 52px;position:relative;background:var(--card);border:1px solid var(--line);border-radius:12px;margin:10px 0}
+.steps li:before{content:counter(s);position:absolute;left:14px;top:10px;width:26px;height:26px;border-radius:50%;background:var(--p2);text-align:center;line-height:26px;font-weight:700}
+table{border-collapse:collapse;width:100%;margin:14px 0}th,td{border:1px solid var(--line);padding:8px 10px;text-align:left;font-size:15px;vertical-align:top}th{background:var(--card)}
+footer{border-top:1px solid var(--line);padding:20px 22px;color:var(--mut);font-size:14px;text-align:center}
+footer a{color:var(--mut);margin:0 8px}
+.maj{color:var(--mut);font-size:14px}
+</style>
 </head>
 <body>
-<a href="#main-content" class="skip-link">Aller au contenu principal</a>
-
-<!-- NAV -->
-<nav class="nav">
-  <div class="nav-in">
-    <a href="index.html" class="logo">Webo <span>Smart</span></a>
-    <div class="nav-links">
-      <a href="index.html" class="active">Accueil</a>
-      <a href="conformite.html">La conformité EAA</a>
-      <a href="services.html">Services &amp; tarifs</a>
-      <a href="apropos.html">À propos</a>
-      <a href="contact.html" class="nav-cta">Prendre rendez-vous</a>
-    </div>
-    <button class="burger" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
-  </div>
+<nav>
+  <b>Appli <span>Stream</span></b>
+  <div><a href="#accueil" data-v="accueil">Accueil</a><a href="#fonctionnement" data-v="fonctionnement">Fonctionnement</a><a href="#contact" data-v="contact">Contact</a></div>
 </nav>
+<main>
 
-<main id="main-content">
-
-<!-- HERO -->
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div>
-      <div class="eyebrow">European Accessibility Act · Depuis le 28 juin 2025</div>
-      <h1>12 millions de Français ne peuvent pas <em>utiliser votre site</em>.</h1>
-      <p class="hero-lede">Un Français sur six vit avec un handicap. Sans un site accessible, ces personnes ne peuvent ni naviguer, ni commander, ni vous contacter. Depuis juin 2025, l'European Accessibility Act en fait une obligation pour les services numériques ouverts au public au-delà du seuil micro-entreprise. Webo Smart qualifie votre situation, puis met votre site en conformité : audit, corrections, déclaration officielle.</p>
-      <div class="hero-cta">
-        <a href="contact.html" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Évaluer mon risque · 15 min</a>
-        <a href="conformite.html" class="btn btn-ghost">Comprendre l'EAA</a>
-      </div>
-      <div class="hero-trust">
-        <div class="hero-trust-item"><b>106</b><span>critères RGAA audités</span></div>
-        <div class="hero-trust-item"><b>28 juin 2025</b><span>loi déjà en vigueur</span></div>
-        <div class="hero-trust-item"><b>12 M</b><span>utilisateurs concernés</span></div>
-      </div>
-    </div>
-
-    <!-- SIGNATURE : impact humain -->
-    <div class="risk-card reveal">
-      <div class="risk-label">Qui ne peut pas accéder à votre site</div>
-      <div class="risk-amount">1 sur 6</div>
-      <div class="risk-sub">Français concerné par une situation de handicap, sans compter les seniors et les situations temporaires</div>
-      <div class="risk-rows">
-        <div class="risk-row"><span>Malvoyants &amp; aveugles (lecteur d'écran)</span><b>1,7 M</b></div>
-        <div class="risk-row"><span>Déficiences motrices (navigation clavier)</span><b>2,3 M</b></div>
-        <div class="risk-row"><span>Troubles cognitifs &amp; dys</span><b>6 M+</b></div>
-        <div class="risk-row" style="border-top:1px solid rgba(197,160,89,.28);margin-top:6px;padding-top:10px"><span><strong>Daltonisme (couleurs, contrastes)</strong></span><b style="color:var(--gold)">2,5 M</b></div>
-      </div>
-      <div class="risk-foot">Une image sans description, un formulaire sans étiquette, un bouton sans contraste : et ces personnes sont bloquées. Elles ne réclament pas, elles partent ailleurs.<br><strong style="color:var(--gold)">Un site accessible est un site que tout le monde peut utiliser</strong>, et c'est désormais ce que la loi exige.</div>
-    </div>
+<section class="view" id="v-accueil">
+  <h1>Vos clips de live, publiés partout, sans perdre le contrôle.</h1>
+  <p class="lead">Vous clippez pendant votre live. Appli Stream met le clip en vertical, applique vos réglages, vous demande votre accord, puis le publie sur TikTok, Instagram et YouTube Shorts.</p>
+  <a class="btn" href="#contact">Demander un accès</a><a class="btn alt" href="#fonctionnement">Voir le fonctionnement</a>
+  <div class="grid">
+    <div class="card"><h3>Vous gardez la main</h3><p>Rien n'est publié sans votre validation, clip par clip.</p></div>
+    <div class="card"><h3>Tout se règle</h3><p>Son d'introduction, texte sur la vidéo, titres et légendes (ou aucun), hashtags, musique, plateformes, horaires.</p></div>
+    <div class="card"><h3>Un seul tableau de bord</h3><p>Clips, planning des lives, publications et statistiques par plateforme, au même endroit.</p></div>
   </div>
+  <p class="maj">Appli Stream est un service édité par WEBO Smart SAS. Il n'est affilié ni à TikTok, ni à Google ou YouTube, ni à Meta ou Instagram, ni à Twitch.</p>
 </section>
 
-<!-- ===== SCANNER PUBLIC — Générateur de leads ===== -->
-<!-- ===== QUI EST CONCERNÉ — cadre juridique honnête ===== -->
-<section class="sec" id="concerne">
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="eyebrow">Êtes-vous réellement concerné ?</div>
-      <h2>La bonne question avant tout : à qui la loi s'applique.</h2>
-      <p>Nous ne vendons pas une obligation à ceux qui n'y sont pas soumis. Le champ d'application de l'EAA repose sur deux critères cumulatifs, que nous vérifions avant toute proposition.</p>
-    </div>
-    <div class="cards cards-2">
-      <div class="card reveal">
-        <div class="card-ico"><i class="fa-solid fa-globe"></i></div>
-        <h3>Un service ouvert au public</h3>
-        <p>Le service numérique doit être destiné au public ou aux consommateurs : un site e-commerce, un espace client, une plateforme ouverte à l'inscription entrent dans le périmètre. Un intranet ou un service strictement B2B en accès fermé en sont généralement exclus.</p>
-      </div>
-      <div class="card reveal">
-        <div class="card-ico"><i class="fa-solid fa-building"></i></div>
-        <h3>Au-delà du seuil micro-entreprise</h3>
-        <p>Sont exemptées les seules structures cumulant moins de 10 salariés <em>et</em> moins de 2 M€ de chiffre d'affaires. Au-delà de l'un de ces seuils, l'entreprise est assujettie. En France, les très grandes entreprises (CA supérieur à 250 M€) sont soumises à une obligation d'accessibilité même en B2B, au titre de la loi de 2005.</p>
-      </div>
-    </div>
-    <p class="reveal" style="text-align:center;margin-top:22px;color:var(--muted);font-size:.95rem">Beaucoup de dirigeants se croient exemptés à tort, ou concernés à tort. Distinguer les deux est notre première étape : nous qualifions votre assujettissement réel avant toute proposition.</p>
-  </div>
+<section class="view" id="v-fonctionnement">
+  <h1>Comment ça marche</h1>
+  <ol class="steps">
+    <li><b>Vous connectez vos comptes.</b> Vous autorisez Appli Stream à publier sur vos comptes TikTok, YouTube et Instagram via leur connexion officielle. Vous pouvez retirer cet accès à tout moment.</li>
+    <li><b>Vous déposez vos clips.</b> Vous importez les clips que vous avez vous-même enregistrés pendant vos lives.</li>
+    <li><b>L'appli prépare la vidéo.</b> Passage en format vertical et application de vos réglages : son d'introduction, texte, hashtags.</li>
+    <li><b>Vous validez.</b> Vous voyez la vidéo prête et vous acceptez ou refusez. Aucune publication automatique sans votre accord.</li>
+    <li><b>L'appli publie.</b> La vidéo part sur les plateformes que vous avez choisies, à l'heure que vous avez choisie.</li>
+    <li><b>Vous suivez les résultats.</b> Un résumé des vues, abonnés et commentaires par plateforme.</li>
+  </ol>
+  <h2>Ce que l'appli ne fait pas</h2>
+  <ul>
+    <li>Elle ne publie jamais sans votre validation.</li>
+    <li>Elle ne choisit pas vos moments forts à votre place.</li>
+    <li>Elle ne revend aucune de vos données.</li>
+    <li>Elle n'ajoute aucun filigrane publicitaire sur vos vidéos.</li>
+  </ul>
+  <h2>Permissions demandées</h2>
+  <table>
+    <tr><th>Plateforme</th><th>Pourquoi</th></tr>
+    <tr><td>TikTok</td><td>Publier la vidéo que vous avez validée sur votre compte.</td></tr>
+    <tr><td>YouTube</td><td>Mettre en ligne la vidéo validée en Short, et lire les statistiques de votre chaîne.</td></tr>
+    <tr><td>Instagram</td><td>Publier le Reel validé sur votre compte professionnel, et lire ses statistiques.</td></tr>
+  </table>
 </section>
 
-<section class="scan-section" id="scanner">
-  <div class="wrap">
-    <div class="scan-head reveal">
-      <div class="eyebrow">Analyse immédiate · Résultat en direct</div>
-      <h2>Découvrez où vous en êtes. Maintenant.</h2>
-      <p>Notre moteur analyse votre site sur les critères du RGAA et vous renvoie votre score, vos non-conformités et votre exposition financière réelle. Aucune inscription. Aucun engagement.</p>
-    </div>
-
-    <div class="scan-box reveal">
-      <div class="scan-form">
-        <label for="scan-url" class="scan-label">Adresse de votre site</label>
-        <div class="scan-input-row">
-          <input type="url" id="scan-url" class="scan-input" placeholder="https://votre-site.fr" autocomplete="url">
-          <button type="button" id="scan-btn" class="btn btn-primary scan-btn">
-            <i class="fa-solid fa-radar" aria-hidden="true"></i>
-            <span id="scan-btn-txt">Analyser mon site</span>
-          </button>
-        </div>
-        <p class="scan-hint">Analyse en temps réel · 12 critères RGAA testés · Aucune donnée conservée sans votre accord</p>
-      </div>
-
-      <div id="scan-loading" class="scan-loading" hidden>
-        <div class="scan-spinner" aria-hidden="true"></div>
-        <p id="scan-status" role="status" aria-live="polite">Chargement de votre site…</p>
-      </div>
-
-      <div id="scan-error" class="scan-error" role="alert" hidden></div>
-
-      <div id="scan-result" class="scan-result" hidden>
-        <div class="scan-score-row">
-          <div class="scan-score-box">
-            <div class="scan-score-label">Score RGAA</div>
-            <div class="scan-score" id="scan-score">—</div>
-            <div class="scan-score-sub" id="scan-verdict">—</div>
-          </div>
-          <div class="scan-meta">
-            <div class="scan-meta-item">
-              <span class="scan-meta-label">Critères conformes</span>
-              <span class="scan-meta-val" id="scan-conforme">—</span>
-            </div>
-            <div class="scan-meta-item">
-              <span class="scan-meta-label">Technologie</span>
-              <span class="scan-meta-val" id="scan-cms">—</span>
-            </div>
-            <div class="scan-meta-item">
-              <span class="scan-meta-label">Pages détectées</span>
-              <span class="scan-meta-val" id="scan-pages">—</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="scan-exposure" id="scan-exposure">
-          <div class="scan-exposure-label">Votre exposition financière estimée</div>
-          <div class="scan-exposure-amount" id="scan-amount">—</div>
-          <div class="scan-exposure-detail" id="scan-amount-detail">—</div>
-        </div>
-
-        <div class="scan-errors">
-          <h3 class="scan-errors-title">Non-conformités détectées</h3>
-          <ul id="scan-errors-list" class="scan-errors-list"></ul>
-        </div>
-
-        <div class="scan-cta">
-          <p><strong>Ce diagnostic est automatisé.</strong> Un audit complet couvre les 106 critères du RGAA, dont ceux qui ne peuvent être testés qu'à la main : navigation clavier réelle, lecteur d'écran, parcours d'achat de bout en bout.</p>
-          <a href="contact.html" class="btn btn-gold">
-            <i class="fa-solid fa-calendar-check" aria-hidden="true"></i> Obtenir un audit complet
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
+<section class="view" id="v-contact">
+  <h1>Contact et accès</h1>
+  <p class="lead">Appli Stream est en phase de test. Écrivez-nous pour demander un accès ou poser une question.</p>
+  <div class="card"><p><b>Par e-mail :</b> <a href="mailto:kmeunier@webo-smart.fr">kmeunier@webo-smart.fr</a><br>
+  <b>Éditeur :</b> WEBO Smart SAS, Triel-sur-Seine (78510), France</p></div>
+  <p>Pour exercer vos droits sur vos données ou supprimer votre compte, écrivez à la même adresse. Nous répondons sous 30 jours maximum.</p>
 </section>
 
-<!-- Exposition financiere (le risque legal vient apres l'enjeu humain) -->
-<section class="band">
-  <div class="wrap">
-    <div class="sec-head reveal" style="max-width:640px">
-      <div class="eyebrow" style="color:var(--gold)">Et si vous ne faites rien</div>
-      <h2 style="color:var(--cream)">L'exclusion de vos utilisateurs a aussi un coût légal.</h2>
-      <p style="color:#C4B896">Au-delà des personnes qui ne peuvent pas vous utiliser, la non-conformité expose votre entreprise à des sanctions financières réelles, canal par canal.</p>
-    </div>
-    <div class="risk-card reveal" style="max-width:560px">
-      <div class="risk-label">Votre exposition financière</div>
-      <div class="risk-amount">150 000 €</div>
-      <div class="risk-sub">estimée pour une entreprise exploitant 3 canaux non conformes</div>
-      <div class="risk-rows">
-        <div class="risk-row"><span>Site e-commerce non conforme</span><b>50 000 €</b></div>
-        <div class="risk-row"><span>Application mobile non conforme</span><b>50 000 €</b></div>
-        <div class="risk-row"><span>Espace client non conforme</span><b>50 000 €</b></div>
-        <div class="risk-row" style="border-top:1px solid rgba(197,160,89,.28);margin-top:6px;padding-top:10px"><span><strong>Astreinte, par jour de retard</strong></span><b style="color:var(--gold)">3 000 €</b></div>
-      </div>
-      <div class="risk-foot">Amende de 50 000 € par service, renouvelable tous les 6 mois, à laquelle s'ajoutent 25 000 € en cas de défaut de déclaration. Chaque canal est sanctionné séparément.<br><strong style="color:var(--gold)">L'astreinte court chaque jour tant que le site n'est pas corrigé, jusqu'à 300 000 €.</strong> Un mois d'attente, c'est 90 000 € qui s'ajoutent.</div>
-    </div>
-  </div>
+<section class="view" id="v-cgu">
+  <h1>Conditions générales d'utilisation</h1>
+  <p class="maj">Dernière mise à jour : 7 novembre 2026</p>
+
+  <h2>1. Éditeur et objet</h2>
+  <p>Le service Appli Stream (« le Service ») est édité par WEBO Smart SAS (« l'Éditeur »), dont les coordonnées figurent dans les <a href="#mentions">mentions légales</a>. Les présentes conditions encadrent l'utilisation du Service par toute personne qui crée un compte (« l'Utilisateur »).</p>
+  <p>Le Service permet à un créateur de contenu de mettre en forme des clips de ses diffusions en direct, de les valider, puis de les publier sur ses propres comptes de réseaux sociaux (TikTok, YouTube, Instagram) et de consulter des statistiques.</p>
+
+  <h2>2. Compte et accès</h2>
+  <p>L'Utilisateur doit être majeur ou disposer de l'autorisation de son représentant légal, et fournir des informations exactes. Il est responsable de la confidentialité de ses identifiants. Il ne peut utiliser le Service que pour des comptes qui lui appartiennent ou qu'il est autorisé à gérer.</p>
+
+  <h2>3. Connexion aux plateformes</h2>
+  <p>La connexion aux comptes TikTok, YouTube et Instagram se fait par le mécanisme d'autorisation officiel de chaque plateforme. L'Éditeur n'a jamais connaissance du mot de passe de l'Utilisateur. L'Utilisateur peut retirer l'accès à tout moment, depuis le Service ou depuis les paramètres de sécurité de la plateforme concernée.</p>
+  <p>L'Utilisateur reste soumis aux conditions d'utilisation de chaque plateforme. Le Service n'est pas affilié à ces plateformes, qui peuvent modifier leurs règles ou leurs limites techniques à tout moment.</p>
+
+  <h2>4. Validation avant publication</h2>
+  <p>Aucune vidéo n'est publiée sans une validation explicite de l'Utilisateur. L'Utilisateur choisit les plateformes, le texte, les hashtags et l'horaire de chaque publication.</p>
+
+  <h2>5. Contenus et droits</h2>
+  <p>L'Utilisateur conserve tous les droits sur ses clips. Il accorde à l'Éditeur une licence limitée, non exclusive, pour la seule durée nécessaire au traitement technique (stockage, montage, publication) demandé par l'Utilisateur.</p>
+  <p>L'Utilisateur garantit disposer des droits nécessaires sur tout ce qu'il importe, notamment les sons, musiques, images et jeux vidéo présents dans ses clips. Les sons d'introduction et autres éléments sont choisis et fournis par l'Utilisateur, qui en assume seul la responsabilité. Le Service ne fournit pas de sons protégés par des droits.</p>
+
+  <h2>6. Usages interdits</h2>
+  <p>Il est interdit d'utiliser le Service pour publier des contenus illicites, haineux, trompeurs ou portant atteinte aux droits de tiers, pour contourner les règles des plateformes (publication de masse, faux comptes), ou pour tenter d'altérer le fonctionnement du Service. L'Éditeur peut suspendre un compte en cas de manquement.</p>
+
+  <h2>7. Offre et prix</h2>
+  <p>Le Service est proposé en phase de test, avec une offre gratuite limitée et, le cas échéant, un abonnement payant dont le prix est affiché avant toute souscription. L'abonnement est sans engagement et résiliable à tout moment, avec effet à la fin de la période en cours. Les droits de rétractation applicables aux consommateurs sont rappelés lors de la souscription.</p>
+
+  <h2>8. Disponibilité et responsabilité</h2>
+  <p>L'Éditeur met en œuvre les moyens raisonnables pour assurer le Service, mais ne garantit pas une disponibilité continue. Il ne peut être tenu responsable des interruptions ou refus de publication venant des plateformes, ni des contenus publiés par l'Utilisateur. Sa responsabilité est limitée aux dommages directs, dans la limite des sommes versées par l'Utilisateur sur les douze derniers mois, sauf faute lourde ou dol et sauf dispositions impératives contraires.</p>
+
+  <h2>9. Données personnelles</h2>
+  <p>Le traitement des données est décrit dans la <a href="#confidentialite">politique de confidentialité</a>.</p>
+
+  <h2>10. Résiliation et suppression</h2>
+  <p>L'Utilisateur peut supprimer son compte à tout moment. Ses données sont alors supprimées selon les délais de la politique de confidentialité. L'Éditeur peut résilier un compte en cas de manquement grave, avec information préalable sauf urgence.</p>
+
+  <h2>11. Modification des conditions</h2>
+  <p>L'Éditeur peut modifier les présentes conditions. Les Utilisateurs sont informés par e-mail ou dans le Service avant l'entrée en vigueur des changements importants.</p>
+
+  <h2>12. Droit applicable</h2>
+  <p>Les présentes conditions sont soumises au droit français. En cas de litige, une solution amiable est recherchée avant toute action. Un consommateur peut recourir à un médiateur de la consommation dont les coordonnées figureront dans les mentions légales.</p>
 </section>
 
+<section class="view" id="v-confidentialite">
+  <h1>Politique de confidentialité</h1>
+  <p class="maj">Dernière mise à jour : 7 novembre 2026</p>
 
-<!-- SERVICES -->
-<section>
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="eyebrow">Ce que nous faisons</div>
-      <h2>Un seul métier : vous rendre conforme, pour de bon.</h2>
-      <p>Webo Smart ne fait pas du web design ni du marketing. Nous faisons une chose, et nous la faisons bien : transformer un site non conforme en site conforme à l'EAA, avec les preuves qui vont avec.</p>
-    </div>
-    <div class="cards cards-3">
-      <div class="card reveal">
-        <div class="card-ico"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
-        <h3>Audit RGAA complet</h3>
-        <p>Évaluation de votre service sur les 106 critères du référentiel : tests automatisés et audit manuel réel (navigation clavier, lecteur d'écran, parcours d'achat de bout en bout).</p>
-      </div>
-      <div class="card reveal">
-        <div class="card-ico"><i class="fa-solid fa-screwdriver-wrench"></i></div>
-        <h3>Remédiation priorisée</h3>
-        <p>Correction des non-conformités par ordre de criticité : d'abord les blocages majeurs qui empêchent un utilisateur handicapé d'acheter, puis les finitions.</p>
-      </div>
-      <div class="card reveal">
-        <div class="card-ico"><i class="fa-solid fa-file-shield"></i></div>
-        <h3>Déclaration d'accessibilité</h3>
-        <p>Publication de votre déclaration officielle, sincère et documentée. C'est la pièce qui vous protège juridiquement et neutralise le contrôle le plus facile à automatiser.</p>
-      </div>
-    </div>
-  </div>
+  <h2>1. Responsable du traitement</h2>
+  <p>WEBO Smart SAS, 3 Allée Charles Baudelaire, 78510 Triel-sur-Seine, France. Contact : <a href="mailto:kmeunier@webo-smart.fr">kmeunier@webo-smart.fr</a>.</p>
+
+  <h2>2. Données collectées</h2>
+  <table>
+    <tr><th>Donnée</th><th>Finalité</th><th>Base légale</th></tr>
+    <tr><td>Adresse e-mail, nom d'affichage</td><td>Créer et gérer le compte, vous contacter sur le Service</td><td>Exécution du contrat</td></tr>
+    <tr><td>Jetons d'accès aux plateformes (TikTok, YouTube, Instagram) et identifiant de votre compte</td><td>Publier les vidéos que vous avez validées et lire vos statistiques</td><td>Exécution du contrat</td></tr>
+    <tr><td>Vidéos importées et vidéos montées</td><td>Montage, validation, publication</td><td>Exécution du contrat</td></tr>
+    <tr><td>Statistiques de vos comptes (vues, abonnés, rétention, commentaires)</td><td>Afficher votre tableau de bord et votre résumé</td><td>Exécution du contrat</td></tr>
+    <tr><td>Journaux techniques (date, erreurs)</td><td>Sécurité et bon fonctionnement</td><td>Intérêt légitime</td></tr>
+  </table>
+  <p>Nous ne collectons que les données nécessaires à ces finalités. Aucun cookie publicitaire ni outil de suivi publicitaire n'est utilisé.</p>
+
+  <h2>3. Utilisation des données issues des plateformes</h2>
+  <p>Les données obtenues via TikTok, YouTube et Instagram servent uniquement à fournir les fonctions décrites ci-dessus à l'Utilisateur. Elles ne sont ni vendues, ni louées, ni utilisées pour de la publicité, ni transférées à des tiers sauf à nos prestataires techniques nécessaires au Service ou si la loi l'exige. Elles ne servent pas à entraîner des modèles d'intelligence artificielle généralistes.</p>
+  <p>L'utilisation et le transfert des informations reçues des API Google respectent la <a href="https://developers.google.com/terms/api-services-user-data-policy">politique relative aux données utilisateur des services d'API Google</a>, y compris ses exigences d'utilisation limitée.</p>
+  <p>Le service YouTube est soumis aux <a href="https://www.youtube.com/t/terms">Conditions d'utilisation de YouTube</a> et à la <a href="https://policies.google.com/privacy">politique de confidentialité de Google</a>.</p>
+
+  <h2>4. Durées de conservation</h2>
+  <ul>
+    <li>Compte et paramètres : pendant la durée du compte, puis supprimés sous 30 jours après sa clôture.</li>
+    <li>Vidéos importées et montées : supprimées 30 jours après leur publication, ou à votre demande avant.</li>
+    <li>Jetons d'accès : supprimés dès que vous retirez l'accès ou fermez le compte.</li>
+    <li>Journaux techniques : 12 mois maximum.</li>
+  </ul>
+
+  <h2>5. Destinataires et hébergement</h2>
+  <p>Les données sont accessibles à l'Éditeur et à ses prestataires techniques (hébergement, stockage, envoi d'e-mails, paiement le cas échéant), qui agissent selon nos instructions. La liste des prestataires et leur localisation est communiquée sur demande. Les données sont hébergées dans l'Union européenne dans la mesure du possible ; tout transfert hors Union européenne est encadré par des garanties appropriées (clauses contractuelles types).</p>
+
+  <h2>6. Vos droits</h2>
+  <p>Vous disposez des droits d'accès, de rectification, d'effacement, de limitation, d'opposition et de portabilité. Pour les exercer, écrivez à <a href="mailto:kmeunier@webo-smart.fr">kmeunier@webo-smart.fr</a> ; nous répondons sous un mois. Vous pouvez aussi saisir la CNIL (<a href="https://www.cnil.fr">cnil.fr</a>).</p>
+
+  <h2>7. Retirer l'accès à vos comptes</h2>
+  <ul>
+    <li>Depuis le Service : bouton « Déconnecter » à côté de chaque plateforme.</li>
+    <li>TikTok : paramètres du compte, rubrique des applications et autorisations.</li>
+    <li>Google : <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+    <li>Instagram : paramètres, rubrique « Sites web et applications ».</li>
+  </ul>
+  <p>Après retrait, nous supprimons les jetons associés. Pour demander la suppression de toutes vos données, écrivez-nous.</p>
+
+  <h2>8. Sécurité</h2>
+  <p>Les échanges sont chiffrés (HTTPS). Les jetons d'accès sont stockés de façon protégée et l'accès aux données est limité au strict nécessaire.</p>
+
+  <h2>9. Mineurs</h2>
+  <p>Le Service s'adresse aux personnes majeures, ou aux mineurs disposant de l'accord de leur représentant légal.</p>
+
+  <h2>10. Modifications</h2>
+  <p>Cette politique peut évoluer. La date de dernière mise à jour figure en haut de la page.</p>
 </section>
 
-<!-- STAT BAND -->
-<section class="band">
-  <div class="wrap">
-    <div class="sec-head reveal" style="max-width:600px;margin-bottom:44px">
-      <div class="eyebrow" style="color:var(--gold)">L'état du web en 2026</div>
-      <h2 style="color:var(--cream)">Presque tous vos concurrents sont en infraction.</h2>
-    </div>
-    <div class="stat-grid">
-      <div class="stat reveal"><b>94,8 %</b><span>des pages d'accueil présentent des erreurs d'accessibilité détectables (WebAIM 2025)</span></div>
-      <div class="stat reveal"><b>3-4 %</b><span>des sites seulement sont réellement accessibles aujourd'hui</span></div>
-      <div class="stat reveal"><b>12 M</b><span>de personnes en situation de handicap en France (INSEE)</span></div>
-      <div class="stat reveal"><b>3 000 €</b><span>d'astreinte par jour tant que le site reste non conforme</span></div>
-    </div>
-  </div>
-</section>
-
-<!-- METHODE -->
-<section>
-  <div class="wrap">
-    <div class="sec-head reveal">
-      <div class="eyebrow">Notre méthode</div>
-      <h2>Quatre phases, un chemin clair vers la conformité.</h2>
-      <p>La loi ne sanctionne pas l'imperfection, elle sanctionne l'inaction. Une démarche structurée et documentée est votre meilleure protection.</p>
-    </div>
-    <div class="steps">
-      <div class="step reveal"><div class="step-bar"><i></i></div><h3>Audit</h3><p>Évaluation sur les 106 critères RGAA. Score, cartographie des non-conformités, grille de criticité.</p></div>
-      <div class="step reveal"><div class="step-bar"><i></i></div><h3>Priorisation</h3><p>On traite d'abord ce qui bloque réellement vos utilisateurs, puis ce qui vous expose au contrôle.</p></div>
-      <div class="step reveal"><div class="step-bar"><i></i></div><h3>Remédiation</h3><p>Corrections par lots, tests de régression, puis publication de votre déclaration d'accessibilité.</p></div>
-      <div class="step reveal"><div class="step-bar"><i></i></div><h3>Suivi continu</h3><p>Contrôles périodiques et déclaration à jour, car chaque mise en ligne peut réintroduire des erreurs.</p></div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section>
-  <div class="wrap">
-    <div class="cta-band reveal">
-      <h2>Un contrôle coûte cher. Un point de 15 minutes vous situe.</h2>
-      <p>En un rendez-vous téléphonique, nous évaluons votre exposition, identifions vos points de blocage et vous donnons un chemin clair. Sans engagement.</p>
-      <a href="contact.html" class="btn btn-gold"><i class="fa-solid fa-calendar-check"></i> Réserver mon créneau</a>
-    </div>
+<section class="view" id="v-mentions">
+  <h1>Mentions légales</h1>
+  <div class="card">
+    <p><b>Éditeur :</b> WEBO Smart, société par actions simplifiée à associé unique (SAS), capital de 10 €<br>
+    <b>Siège :</b> 3 Allée Charles Baudelaire, 78510 Triel-sur-Seine, France<br>
+    <b>SIREN / RCS :</b> 107 778 839 R.C.S. Versailles<br>
+    <b>Président et directeur de la publication :</b> Kylian Meunier<br>
+    <b>Contact :</b> <a href="mailto:kmeunier@webo-smart.fr">kmeunier@webo-smart.fr</a><br>
+    <b>Hébergeur du site :</b> GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis<br>
+    <b>Médiateur de la consommation :</b> sera désigné avant l'ouverture des abonnements payants</p>
   </div>
 </section>
 
 </main>
-
-<!-- FOOTER -->
 <footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div class="foot-brand">
-        <a href="index.html" class="logo">Webo <span>Smart</span></a>
-        <p>Cabinet spécialisé dans la mise en conformité à l'European Accessibility Act. Nous rendons vos services numériques accessibles à tous, et conformes à la loi.</p>
-      </div>
-      <div class="foot-col">
-        <h3 class="foot-h">Navigation</h3>
-        <a href="index.html">Accueil</a>
-        <a href="conformite.html">La conformité EAA</a>
-        <a href="services.html">Services &amp; tarifs</a>
-        <a href="apropos.html">À propos</a>
-      </div>
-      <div class="foot-col">
-        <h3 class="foot-h">Ressources</h3>
-        <a href="conformite.html">Comprendre l'EAA</a>
-        <a href="conformite.html#sanctions">Sanctions &amp; contrôles</a>
-        <a href="services.html">Nos formules</a>
-        <a href="contact.html">Prendre rendez-vous</a>
-      </div>
-      <div class="foot-col">
-        <h3 class="foot-h">Contact</h3>
-        <a href="mailto:contact@webo-smart.fr">contact@webo-smart.fr</a>
-        <a href="contact.html">Formulaire de contact</a>
-        <a href="apropos.html">Kylian Meunier · Fondateur</a>
-        <a href="accessibilite.html">Déclaration d'accessibilité</a>
-        <a href="mentions-legales.html">Mentions légales</a>
-      </div>
-    </div>
-    <div class="foot-bot">
-      <span>© <span id="year">2026</span> WEBO — Tous droits réservés. Webo Smart, SASU au capital de 10 € · RCS Versailles 107 778 839.</span>
-      <span>Île-de-France · France</span>
-    </div>
-  </div>
+  <a href="#cgu">CGU</a><a href="#confidentialite">Confidentialité</a><a href="#mentions">Mentions légales</a><a href="#contact">Contact</a>
+  <div style="margin-top:8px">© 2026 WEBO Smart SAS. Appli Stream n'est affilié ni à TikTok, ni à Google/YouTube, ni à Meta/Instagram.</div>
 </footer>
-
-<script src="script.js"></script>
+<script>
+const views=['accueil','fonctionnement','contact','cgu','confidentialite','mentions'];
+function show(){let h=(location.hash||'#accueil').slice(1);if(!views.includes(h))h='accueil';
+  views.forEach(v=>document.getElementById('v-'+v).classList.toggle('on',v===h));
+  document.querySelectorAll('nav a').forEach(a=>a.classList.toggle('on',a.dataset.v===h));
+  window.scrollTo(0,0)}
+addEventListener('hashchange',show);show();
+</script>
 </body>
 </html>
